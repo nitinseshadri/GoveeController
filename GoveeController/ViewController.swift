@@ -28,7 +28,7 @@ class ViewController: NSViewController, CBCentralManagerDelegate, CBPeripheralDe
     // MARK: IBActions
     
     @IBAction func turnOn(_ sender: Any) {
-        guard connectedPeripheral != nil else { return }
+        guard storedCharacteristic != nil else { return }
         
         write(Data(onCommand), characteristic: storedCharacteristic, withResponse: false)
         
@@ -37,7 +37,7 @@ class ViewController: NSViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     
     @IBAction func turnOff(_ sender: Any) {
-        guard connectedPeripheral != nil else { return }
+        guard storedCharacteristic != nil else { return }
         
         write(Data(offCommand), characteristic: storedCharacteristic, withResponse: false)
         
