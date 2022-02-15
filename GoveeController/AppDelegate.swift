@@ -26,6 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover.contentViewController = controller
         
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+        statusItem.behavior = .terminationOnRemoval
         
         if let button = statusItem.button {
             button.image = NSImage(systemSymbolName: "g.circle", accessibilityDescription: "Govee Controller")
