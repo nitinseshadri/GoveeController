@@ -26,6 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover.contentViewController = controller
         
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+        statusItem.isVisible = true
         statusItem.behavior = .terminationOnRemoval
         
         if let button = statusItem.button {
